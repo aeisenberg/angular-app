@@ -67,11 +67,7 @@ require('./lib/routes/appFile').addRoutes(app, config);
 app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 
 // Start up the server on the port specified in the config
-server.listen(config.server.listenPort, '0.0.0.0', 511, function() {
-  // // Once the server is listening we automatically open up a browser
-  var open = require('open');
-  open('http://localhost:' + config.server.listenPort + '/');
-});
+server.listen(config.server.listenPort, '0.0.0.0', 511);
 console.log('Angular App Server - listening on port: ' + config.server.listenPort);
 secureServer.listen(config.server.securePort);
 console.log('Angular App Server - listening on secure port: ' + config.server.securePort);
