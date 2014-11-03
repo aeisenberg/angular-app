@@ -2,3 +2,4 @@
 node_modules
 protractor/target
 protractor/target
+*.sublime-workspace

@@ -34,6 +34,9 @@ exports.config = {
             return originalAddMatcherResult.apply(this, arguments);
         };
 
+        // ensure browser has been navigated to site and scripts are loaded
+        browser.get(browser.baseUrl);
+
         return jasmine.getEnv().addReporter(new jasmine.JUnitXmlReporter('target/surefire-reports/'));
     },
 
@@ -41,6 +44,13 @@ exports.config = {
     capabilities: {
         'browserName': 'chrome'
     },
+
+    // uncomment to test both firefox and chrome
+    // multiCapabilities: [{
+    //     'browserName': 'firefox'
+    // }, {
+    //     'browserName': 'chrome'
+    // }],
 
     // Spec patterns are relative to the current working directly when
     // protractor is called.
