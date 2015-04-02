@@ -14,3 +14,8 @@ Step 1: Getting Started
 10. cd ../protractor
 11. npm update
 12. protractor dev-protractor.conf.js
+
+Step 2: First tests
+===================
+
+Run the initial test first to make sure it works. Then add two more similar tests for ensuring navigation on other pages.
