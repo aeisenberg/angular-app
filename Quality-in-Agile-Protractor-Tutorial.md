@@ -19,3 +19,8 @@ Step 2: First tests
 ===================
 
 Run the initial test first to make sure it works. Then add two more similar tests for ensuring navigation on other pages.
+
+Step 3: Sketching test scenarios
+================================
+
+Determine the main use cases and sketch some initial test scenarios to create protractor tests for.
