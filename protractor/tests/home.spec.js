@@ -6,11 +6,13 @@ describe('Home Page', function () {
         expect(browser.getCurrentUrl()).toEqual(browser.baseUrl + 'projectsinfo');
     });
 
-    it('should be the projects page', function () {
-    	// add a test for navigating to /projects
-    });
-    
-    it('should go back to default page', function () {
-    	// add a test for navigating to a page that doesn't exist
-    });
+	it('should be the projects page', function () {
+		browser.get(browser.baseUrl + 'projects');
+	    expect(browser.getCurrentUrl()).toEqual(browser.baseUrl + 'projects');
+	});
+
+	it('should go back to default page', function () {
+		browser.get(browser.baseUrl + 'imnothere');
+	    expect(browser.getCurrentUrl()).toEqual(browser.baseUrl + 'projectsinfo');
+	});
 });
