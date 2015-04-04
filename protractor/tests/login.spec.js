@@ -58,6 +58,16 @@ describe('LogIn', function () {
         expect(element(by.cssContainingText('div.modal-header', 'Sign in')).isPresent()).toBeFalsy();
     });
 
+
+    it('should clear login dialog', function () {
+        // TODO: implement test
+        // 1. open login dialog
+        // 2. enter a user/pass
+        // 3. click the 'clear' button
+        // 4. use the getText method on #login-email and #login-password to ensure text is empty string
+    });
+
+
     afterEach(function() {
         // logout if already logged in
         element(by.css('#logout')).isDisplayed().then(function(result) {

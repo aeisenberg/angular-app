@@ -37,3 +37,8 @@ Implement the login test scenarios. Use the following protractor concepts:
 * element(...).isDisplayed()
 * element(...).sendKeys(<text>)
 * element(...).clearAndSendKeys(<text>)
+
+Step 5: More complex test
+=========================
+
+ElementFinder methods return promises. They can be invoked synchronously *OR* asynchronously.
