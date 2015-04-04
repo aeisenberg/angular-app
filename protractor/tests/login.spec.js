@@ -1,10 +1,12 @@
 'use strict';
 describe('LogIn', function () {
 
+    var LoginPage = require('../pages/login.page.js'), loginPage;
+
     beforeEach(function() {
         browser.get(browser.baseUrl);
+        loginPage = new LoginPage();
     });
-
 
     it('should log in', function () {
     	element(by.css('#login')).click();

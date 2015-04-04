@@ -42,3 +42,8 @@ Step 5: More complex test
 =========================
 
 ElementFinder methods return promises. They can be invoked synchronously *OR* asynchronously.
+
+Step 6: Introduce the Page Object design pattern
+================================================
+
+There is a *lot* of duplication in these tests. Can we clean them up, and make the tests easier to read?
