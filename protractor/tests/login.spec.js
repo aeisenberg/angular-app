@@ -2,7 +2,7 @@
 describe('LogIn', function () {
 
     beforeEach(function() {
-        // TODO: return to original baseUrl
+        browser.get(browser.baseUrl);
     });
 
 
@@ -38,11 +38,24 @@ describe('LogIn', function () {
     });
 
     it('should fail to log in with bad password', function () {
-        // TODO: implement test
+        element(by.css('#login')).click();
+        browser.waitForAngular();
+
+        element(by.css('#login-email')).sendKeys('andrew.eisenberg@gmail.com');
+        element(by.css('#login-password')).sendKeys('not a password');
+
+        element(by.css('#do-login')).click();
+
+        expect(element(by.css('.alert-error')).isPresent()).toBeTruthy();
     });
 
     it('should close login dialog', function () {
-        // TODO: implement test
+        element(by.css('#login')).click();
+        browser.waitForAngular();
+
+        expect(element(by.cssContainingText('div.modal-header', 'Sign in')).isPresent()).toBeTruthy();
+        element(by.css('button.cancel')).click();
+        expect(element(by.cssContainingText('div.modal-header', 'Sign in')).isPresent()).toBeFalsy();
     });
 
     afterEach(function() {
