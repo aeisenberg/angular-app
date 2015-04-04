@@ -24,3 +24,16 @@ Step 3: Sketching test scenarios
 ================================
 
 Determine the main use cases and sketch some initial test scenarios to create protractor tests for.
+
+Step 4: Use case-based test scenarios
+=====================================
+
+Implement the login test scenarios. Use the following protractor concepts:
+
+* element(by.css(<css-selector>))
+* element(by.cssContainingText(<css-selector>), <text>)
+* element(...).click()
+* element(...).isPresent()
+* element(...).isDisplayed()
+* element(...).sendKeys(<text>)
+* element(...).clearAndSendKeys(<text>)
