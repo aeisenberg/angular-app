@@ -47,3 +47,12 @@ Step 6: Introduce the Page Object design pattern
 ================================================
 
 There is a *lot* of duplication in these tests. Can we clean them up, and make the tests easier to read?
+
+Step 7: Advanced features of protractor
+=======================================
+
+* Screenshots
+* Test reporters
+* Debugging
+* Focussed tests (fit and fdescribe)
+* Element explorer
